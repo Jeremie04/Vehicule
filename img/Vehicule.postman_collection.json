@@ -1,0 +1,616 @@
+{
+	"info": {
+		"_postman_id": "5567099d-fad3-4fb5-a41a-ae1cf165b334",
+		"name": "Vehicule",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "31198848",
+		"_collection_link": "https://dark-trinity-629769.postman.co/workspace/My-Workspace~b236eb96-1f3e-4012-8cf4-5351dca7aecb/collection/31198848-5567099d-fad3-4fb5-a41a-ae1cf165b334?action=share&source=collection_link&creator=31198848"
+	},
+	"item": [
+		{
+			"name": "Marque",
+			"item": [
+				{
+					"name": "Insertion marque (nomMarque, idPays)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/marque/BMW/PAY2",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"marque",
+								"BMW",
+								"PAY2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Selection Marques",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/marques",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"marques"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Selection Marque par id (idmarque)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/marques/MAR5",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"marques",
+								"MAR5"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suppression Marque (idmarque)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/marque/MAR1",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"marque",
+								"MAR1"
+							]
+						}
+					},
+					"response": []
+				}
+			],
+			"description": "Tous a propos des marques"
+		},
+		{
+			"name": "TypeCarburant",
+			"item": [
+				{
+					"name": "Select all from Type Carburants",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/typecarburants",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"typecarburants"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Insert into Type Carburant (nomTypeCarburant)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/typecarburant/Essence",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"typecarburant",
+								"Essence"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Selection Type Carburant (idTypeCarburant)",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/typecarburants/Essence",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"typecarburants",
+								"Essence"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Image",
+			"item": [
+				{
+					"name": "UploadFile",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": "postman-cloud:///1eebaa96-eb26-4b10-b90b-2d90e936b135"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/traitementimage/file",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"traitementimage",
+								"file"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Mail",
+			"item": [
+				{
+					"name": "EnvoieMessage",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "fichiers",
+									"type": "file",
+									"src": "/C:/Users/ITU/Desktop/VehiculeSpring/img/Peugeot-405-02.jpg"
+								}
+							]
+						},
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/mail/UTI1/Bonjour bonjour les gens/fichiers",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"mail",
+								"UTI1",
+								"Bonjour bonjour les gens",
+								"fichiers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EssaieHeader",
+					"request": {
+						"auth": {
+							"type": "noauth"
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/greeting",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"greeting"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categorie",
+			"item": [
+				{
+					"name": "test",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/categories",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"categories"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Pays",
+			"item": [
+				{
+					"name": "select * from pays",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.apphttp://localhost:8080/pays",
+							"protocol": "vehiculespring-production-5f1a.up.railway.apphttp",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"pays"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "insertion dans pays",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/pays/France",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"pays",
+								"France"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Suppression Pays",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:8080vehiculespring-production-5f1a.up.railway.app/suppressionpays/PAY3",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080vehiculespring-production-5f1a.up.railway.app",
+							"path": [
+								"suppressionpays",
+								"PAY3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Select from pays where",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/paysspecifique/PAY2",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"paysspecifique",
+								"PAY2"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Annonce",
+			"item": [
+				{
+					"name": "Liste Annonces A Valider",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/annonce/Avalide",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"annonce",
+								"Avalide"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Liste Annonces Validees",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/annonce/listesValidees",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"annonce",
+								"listesValidees"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Listes Mes Annonces Actuelles",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/annonce/mesAnnonce",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"annonce",
+								"mesAnnonce"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Liste Historique Annonce Utilisateur",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/annonce/mesListes",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"annonce",
+								"mesListes"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Validation Annonce",
+					"request": {
+						"method": "GET",
+						"header": []
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Recherche avancé",
+			"item": [
+				{
+					"name": "recherche annonce",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"marque\":\"MAR1\",\r\n    \"modele\":\"MOD1\",\r\n    \"categorie\":\"CAT1\",\r\n    \"dateMin\":\" 2023-02-05 00:00\",\r\n    \"dateMax\":\" 2023-12-05 00:00\",\r\n    \"prixMin\":\"2000\",\r\n    \"prixMax\":\"400000\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/annonce/rechercheAvance",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"annonce",
+								"rechercheAvance"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Login/inscription",
+			"item": [
+				{
+					"name": "inscription",
+					"request": {
+						"auth": {
+							"type": "bearer"
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\"nom\":\"Henintsoa\",\r\n\"prenom\":\"Lova\",\r\n\"dateNaissance\":\"2004-03-23\",\r\n\"sexe\":\"0\",\r\n\"login\":\"lova@gmail.com\",\r\n \"motDePasse\":\"lova\",\r\n\"role\":\"user\",\r\n\"adresse\":\"Soamanandrariny\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "https://vehiculespring-production-5f1a.up.railway.app/initial/inscription",
+							"protocol": "https",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"initial",
+								"inscription"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"url": {
+							"raw": "https://vehiculespring-production-5f1a.up.railway.app/initial/login",
+							"protocol": "https",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"initial",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Annonce Favoris",
+			"item": [
+				{
+					"name": "Mes Annonces Favoris",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/annoncefavoris/listefavoris",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"annoncefavoris",
+								"listefavoris"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Favoriser une Annonce",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "vehiculespring-production-5f1a.up.railway.app/annonce/mettreFavoris/ANN3",
+							"host": [
+								"vehiculespring-production-5f1a",
+								"up",
+								"railway",
+								"app"
+							],
+							"path": [
+								"annonce",
+								"mettreFavoris",
+								"ANN3"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
