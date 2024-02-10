@@ -6,6 +6,9 @@ import com.vehicule.gestion.auth.AuthenticationRequest;
 import com.vehicule.gestion.auth.RegisterRequest;
 import com.vehicule.gestion.service.AuthenticationService;
 import com.vehicule.gestion.tools.Util;
+
+import jakarta.transaction.Transactional;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.HttpStatusCode;
@@ -45,6 +48,7 @@ public class UtilisateurController {
   // }
 
   @PostMapping("/inscription")
+    @Transactional
   public ResponseEntity<Map<String, Object>> register(@RequestBody RegisterRequest request) {
     try {
       Map<String, Object> response = Util.getDefaultResponse();
