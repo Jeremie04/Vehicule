@@ -25,7 +25,7 @@ import com.vehicule.gestion.service.UtilisateurService;
 import com.vehicule.gestion.tools.Role;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 // @RequestMapping("/api/people")
 public class ControllerMessage {
 

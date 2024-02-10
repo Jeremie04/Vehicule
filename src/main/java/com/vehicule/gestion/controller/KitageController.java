@@ -22,7 +22,7 @@ import com.vehicule.gestion.service.KitageService;
 import jakarta.transaction.Transactional;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class KitageController {
 
     @Autowired

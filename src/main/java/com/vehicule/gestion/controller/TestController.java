@@ -14,7 +14,7 @@ import com.vehicule.gestion.modele.Test;
 import com.vehicule.gestion.service.TestService;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RequestMapping("/test")
 public class TestController {
 

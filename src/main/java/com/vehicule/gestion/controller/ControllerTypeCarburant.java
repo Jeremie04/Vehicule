@@ -21,7 +21,7 @@ import com.vehicule.gestion.service.ServiceTypeCarburant;
 import io.swagger.v3.oas.annotations.parameters.RequestBody;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class ControllerTypeCarburant {
 
     @Autowired

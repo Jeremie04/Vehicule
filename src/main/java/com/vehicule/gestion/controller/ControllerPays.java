@@ -20,7 +20,7 @@ import com.vehicule.gestion.modele.Pays;
 import com.vehicule.gestion.service.ServicePays;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class ControllerPays {
 
     @Autowired

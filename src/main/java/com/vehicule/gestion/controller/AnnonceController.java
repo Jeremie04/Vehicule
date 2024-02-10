@@ -31,7 +31,7 @@ import com.vehicule.gestion.service.UtilisateurService;
 import jakarta.transaction.Transactional;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 @RequestMapping("/annonce")
 public class AnnonceController {
 

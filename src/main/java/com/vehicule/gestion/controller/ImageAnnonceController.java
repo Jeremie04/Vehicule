@@ -22,7 +22,7 @@ import com.vehicule.gestion.service.ImageAnnonceService;
 import jakarta.transaction.Transactional;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class ImageAnnonceController {
     @Autowired
     private ImageAnnonceService entiteService;

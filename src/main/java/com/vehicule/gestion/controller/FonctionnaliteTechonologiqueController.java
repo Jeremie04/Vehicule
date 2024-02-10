@@ -21,7 +21,7 @@ import jakarta.transaction.Transactional;
 import java.util.List;
 
 @RestController
-@CrossOrigin(origins = "http://localhost:3000")
+@CrossOrigin(origins = "*")
 public class FonctionnaliteTechonologiqueController {
     @Autowired
     private FonctionnaliteTechnologiqueService entiteService;
