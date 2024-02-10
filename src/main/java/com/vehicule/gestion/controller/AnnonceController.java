@@ -82,7 +82,7 @@ public class AnnonceController {
         }
     }
 
-    @PostMapping("/mesHistoriques")
+    @GetMapping("/mesHistoriques")
     public ResponseEntity<String> avoirHistorique() {
         try {
             String mailUtilisateur = String.valueOf(SecurityContextHolder.getContext().getAuthentication().getName());
@@ -170,6 +170,18 @@ public class AnnonceController {
         } catch (Exception e) {
             reponse = new ApiResponse(e.getMessage(), null);
             return ResponseEntity.status(500).body(gson.toJson(reponse));
+        }
+    }
+
+    @GetMapping("/listesById/{idAnnonce}")
+    public ResponseEntity<String> getAllById(@PathVariable("idAnnonce") String idAnnonce) {
+        try {
+            List<Annonce> annonce = annonceService.findAllByIdAnnonce(idAnnonce);
+            reponse = new ApiResponse("", annonce);
+            return ResponseEntity.ok(gson.toJson(reponse));
+        } catch (Exception e) {
+            reponse = new ApiResponse(e.getMessage(), null);
+            return ResponseEntity.status(500).body(e.getMessage());
         }
     }
 

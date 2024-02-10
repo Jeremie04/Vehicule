@@ -18,6 +18,7 @@ import java.util.Optional;
 public class AnnonceService {    
     @Autowired
     private AnnonceRepository annonceRepositorie;
+    public Object findAllByIdAnnonce;
 
     public List<Annonce> findAll(){
         return annonceRepositorie.findAll();

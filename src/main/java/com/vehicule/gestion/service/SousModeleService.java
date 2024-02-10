@@ -34,11 +34,10 @@ public class SousModeleService {
         return sousService.save(c);
     }
 
-    public void update(String id, String modele, String nom, float vitesse, float conso, String carbu, boolean manuel,
-            float moteur, float batterie) {
-        System.out.println("huhu");
-        sousService.update(modele, modele, nom, vitesse, conso, carbu, manuel, moteur, batterie);
-        System.out.println("huhu");
+    public void update(String id,String modele,String nom,float vitesse,float conso,String carbu,boolean manuel,float moteur,float batterie){
+        System.out.println("huhu"); 
+        sousService.update(id, modele, nom, vitesse, conso, carbu, manuel, moteur, batterie);
+        System.out.println("huhu"); 
     }
 
 }
