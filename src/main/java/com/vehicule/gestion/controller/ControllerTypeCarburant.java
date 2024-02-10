@@ -46,7 +46,7 @@ public class ControllerTypeCarburant {
     public ResponseEntity<String> save(@RequestBody TypeCarburant type) {
         try {
             servicetypecarburant.save(type);
-            return ResponseEntity.ok("Marque saved successfully.");
+            return ResponseEntity.ok("Type saved successfully.");
         } catch (Exception e) {
             // e.printStackTrace();
             reponse = new ApiResponse(e.getMessage(), null);
@@ -72,7 +72,7 @@ public class ControllerTypeCarburant {
     public ResponseEntity<String> deleteById(@PathVariable("id") String id) {
         try {
             servicetypecarburant.deleteById(id);
-            return ResponseEntity.ok("Marque id = " + id + " deleted successfully.");
+            return ResponseEntity.ok("Type carburant id = " + id + " deleted successfully.");
         } catch (Exception e) {
             e.printStackTrace();
             reponse = new ApiResponse(e.getMessage(), null);
