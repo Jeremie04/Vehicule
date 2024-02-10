@@ -11,7 +11,7 @@ public class MeilleurVendeur {
    @Id
    @Column(name="idvendeur")
    String idVendeur;
-    @Column(name="nom")
+    @Column(name="nomutilisateur")
     String nomVendeur;
     int annee;
     int mois;
