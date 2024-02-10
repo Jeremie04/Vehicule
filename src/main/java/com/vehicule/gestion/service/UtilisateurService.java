@@ -32,13 +32,11 @@ public class UtilisateurService {
     return utilisateurRepository.findAll();
   }
 
-  @Transactional
   public Optional<Utilisateur> findByMail(String mail) {
     Optional<Utilisateur> user = utilisateurRepository.findByMail(mail);
     return user;
   }
 
-  @Transactional
   public Optional<Utilisateur> findById(String id) {
     Optional<Utilisateur> user = utilisateurRepository.findById(id);
     return user;
